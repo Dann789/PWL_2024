@@ -70,7 +70,7 @@ Route::get('/coba/{nama}/{nim}', [PageController::class, 'isiNama']);
 // Route agar terhubung ke frontend
 Route::resource('photos', PhotoController::class) -> only (['index', 'show']);
 
-Route::resource('photos', PhotoController::class) -> only (['create', 'store', 'update', 'destroy']);
+Route::resource('photos', PhotoController::class) -> except (['create', 'store', 'update', 'destroy']);
 
 // Route untuk view (awal)
 // Route::get('/greeting', function() {
